@@ -1,0 +1,74 @@
+@media (max-width: 1024px) {
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+}
+
+
+@media (max-width: 560px) {
+
+  body {font-size: 16px;}
+ 
+  .wraptopo {
+    .topo {
+      height: 70px;
+      .menu span {display: none;}
+      a.nomecurso {
+        font-size: 1.35em;
+        span {display: none;}
+      }
+    }
+
+    &.fixo .topo {height: 70px}
+  }
+
+  .navegacao, .navegacao.fixar {
+    top: 80px;
+  }
+
+  section {
+    margin: 10px 0;
+
+    .container {
+      padding: 10px;
+    }
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  body {font-size: 14px}
+
+  .wraptopo {
+    .topo {
+      .menu {
+        padding-right: 8px;
+        div {width: 35px}
+      }
+      a.nomecurso {padding-left: 8px}
+    }
+  }
+  .navegacao {width: 100%}
+
+  .wraprodape .rodape {
+    height: 60px;
+    a {font-size: 1.3em;}
+  }
+
+}
+
+
+@media (max-width: 320px) {
+
+
+
+}

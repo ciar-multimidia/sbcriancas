@@ -1,18 +1,19 @@
 jQuery(document).ready(function($) {
 	$(".menu").click(function() {
-	  $("nav").toggleClass('mostra');
+	  $(".navegacao").toggleClass('mostra');
 	  $(this).toggleClass('ativo');
 
 	  if ($(".overlay").length > 0) {
   		$(".overlay").remove();
-  		$('body').css('overflow', 'auto');
+  		$('body,html').css('overflow-y', 'auto');
 	  } else {
-	  	$('body').append('<div class="overlay"></div>').css('overflow', 'hidden');
+	  	$('body').append('<div class="overlay"></div>').css('overflow-y', 'hidden');
+	  	$('html').css('overflow-y', 'hidden');
 		$('.overlay').click(function() {
-			$("nav").removeClass('mostra');
+			$(".navegacao").removeClass('mostra');
 			$(this).remove();
 			$('.menu').removeClass('ativo');
-			$('body').css('overflow', 'auto');
+			$('body,html').css('overflow-y', 'auto');
 		});
 	  }
 	});
@@ -33,17 +34,17 @@ jQuery(document).ready(function($) {
 		if (thisScroll > scrollAtual) {
 			if (thisScroll > menu_bottom - menufixoheight) {
 				menufixo.removeClass('dn visivel');
-				$("nav").removeClass('fixar');
+				$(".navegacao").removeClass('fixar');
 			} else{
 				menufixo.addClass('dn');
 			}
 		} else if (thisScroll < scrollAtual){
 			if (thisScroll > menu_bottom - menufixoheight) {
 				menufixo.addClass('visivel');
-				$("nav").addClass('fixar');
+				$(".navegacao").addClass('fixar');
 			} else{
 				menufixo.removeClass('visivel').addClass('dn');
-				$("nav").removeClass('fixar');
+				$(".navegacao").removeClass('fixar');
 			}
 		}
 		scrollAtual = thisScroll;
