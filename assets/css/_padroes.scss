@@ -119,7 +119,37 @@ table{
 // listas
 dl {
     dt, dd {margin: 0; padding: 0;}
-    dt {margin-top: 25px; font-weight: bold;}
+    dt {margin: 25px 0 5px; font-weight: bold; line-height: 1.2}
+}
+
+
+ul, ol {
+    list-style: none;
+    counter-reset: section;
+    // padding: 0;
+
+    li {
+        &:before {
+            content: "\25CF";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            color: $cor3;
+        }
+    }
+
+}
+ol {
+    li:before {
+        counter-increment: section;
+        content: counter(section) ")";
+        padding-right: 0;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.1em;
+        vertical-align: baseline;
+    }
 }
 
 
@@ -133,6 +163,7 @@ hr {
 }
 
 
+// ocultar
 .ocultar {
     visibility: hidden;
 }
