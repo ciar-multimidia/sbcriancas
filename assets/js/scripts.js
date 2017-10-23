@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+	// menu navegacao
 	$(".menu").click(function() {
 	  $(".navegacao").toggleClass('mostra');
 	  $(this).toggleClass('ativo');
@@ -50,4 +51,7 @@ jQuery(document).ready(function($) {
 		scrollAtual = thisScroll;
 	});
 
+
+	// botao salvar
+	$("body").append('<button onclick="window.print();" class="salvarpagina" aria-label="Salvar página"><img src="../assets/img/icon_print.svg" aria-hidden="true"></button>');
 });

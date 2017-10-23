@@ -7,7 +7,7 @@
 
 
 @media (max-width: 768px) {
-
+  .salvarpagina {display: none;}
 
 }
 
@@ -71,7 +71,15 @@
 
   .wraprodape .rodape {
     height: 60px;
-    a {font-size: 1.3em;}
+    a {font-size: 1.3em;
+        &.voltar:before {
+          margin-right: 4px;
+        }
+
+        &.avancar:after {
+          margin-left: 4px;
+        }
+    }
   }
 
 }

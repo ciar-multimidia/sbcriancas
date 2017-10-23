@@ -64,7 +64,7 @@ body {
 				position: absolute;
 				width: 100%; height: 100%;
 				top: 0; left: 0;
-				background: url('../img/fonte-portal.png') no-repeat center center;
+				background: url('../img/fonte-portal.png') no-repeat center center / 100%;
 				z-index: 1;
 			}
 		}
@@ -93,6 +93,44 @@ body {
 }
 
 
+@media (max-width: 800px) {
+  .wrapportal {
+  	width: 320px;
 
+  	.portal {
+  		.animacao {
+  			margin: -20px 0 0 -20px;
+			width: 320px;
+			height: 310px;
+
+			.wrapfundo {
+			    width: 270px;
+			    height: 260px;
+			    top: 25px;
+			    left: 25px;
+			}
+  		}
+
+  		h2 {font-size: 1.6em}
+
+  		button {
+  			padding: 7px 14px;
+  			font-size: 1.25em;
+  		}
+  	}
+  }
+}
+
+
+@media (max-width: 370px) {
+	.wrapportal {
+		margin: 0 auto;
+	  	position: relative;
+	  	padding: 10px;
+	  	top: auto;
+	  	left: auto;
+	  	@include transform(translate(0,0));
+	}
+}
 
 
