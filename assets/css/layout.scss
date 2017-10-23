@@ -342,7 +342,7 @@ section {
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);  	
 
-	div {width: 49%;}
+	div {width: 49%; hyphens: none}
 }
 
 .ficha-catalografica {
