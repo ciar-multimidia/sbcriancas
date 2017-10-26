@@ -1,7 +1,6 @@
 @page {
   margin: 2cm;
-  counter-increment: page;
-  counter-reset: page 1;
+  size: A4;
 }
 
 @page :first {
@@ -53,7 +52,11 @@ h4, h5, h6 {font-size: 1em}
 
 h1, h2, h3, h4, h5, h6 {margin-top: 1cm}
 
-p {text-indent: 1cm}
+p {text-indent: 1cm;
+  widows: 3; 
+  orphans: 3;
+  page-break-inside:avoid;
+}
 
 // ocultar itens
 .wraptopo.fixo, .wraptopo .topo .menu, .navegacao, .wraprodape, .pagina, .salvarpagina {
