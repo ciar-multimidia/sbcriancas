@@ -1,17 +1,14 @@
 @page {
   margin: 2cm;
   size: A4;
-}
-
-@page :first {
-  margin-top: 0cm;
+  font-family: 'Calibri';
 }
 
    
 body{
-	padding: 40px 0;
   font-family: 'Calibri';
-  hyphens: auto
+  font-size: 14pt;
+  hyphens: none;
 }
 
 // links
@@ -52,13 +49,67 @@ h4, h5, h6 {font-size: 1em}
 
 h1, h2, h3, h4, h5, h6 {margin-top: 1cm}
 
-p {text-indent: 1cm;
+p {
+  text-indent: 1cm;
   widows: 3; 
   orphans: 3;
-  page-break-inside:avoid;
 }
 
+
+figure {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  page-break-inside:avoid;
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+
+table {
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 1cm;
+  border: 2px solid;
+  border-right-width: 0;
+  border-left-width: 0;
+  th, td{
+    margin: 0;
+    border: 1px solid hsl(0,0,65%);
+    border-top-width: 0;
+    border-left-width: 0;
+    padding: 10px 20px;
+
+    p {text-indent: 0}
+    &:last-child{
+      border-right-width: 0;
+    }
+  }
+
+  tr {page-break-inside:avoid;}
+
+
+  caption{
+    text-align: left;
+    line-height: 1.2;
+    color: gray;
+  }
+}
+
+
+hr {margin: 1cm 0;}
+
 // ocultar itens
-.wraptopo.fixo, .wraptopo .topo .menu, .navegacao, .wraprodape, .pagina, .salvarpagina {
+.wraptopo.fixo, .wraptopo .topo .menu, .navegacao, .wraprodape, .pagina, #salvarpagina {
   display: none;
 }

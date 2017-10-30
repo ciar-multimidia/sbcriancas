@@ -104,6 +104,9 @@ table{
         &:last-child{
             border-right-width: 0;
         }
+        &.destaque {
+          background: lighten($padrao,75%);
+        }
     }
 
     caption{

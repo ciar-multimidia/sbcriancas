@@ -13,6 +13,7 @@ body {
 	line-height: 1.618;
 	position: relative; 
 	hyphens: auto;
+	min-height: 100vh;
 	background: url('../img/bodypattern.jpg') repeat fixed;
 }
 
@@ -127,8 +128,6 @@ body {
 		}
 	}
 }
-
-
 
 
 
@@ -248,12 +247,11 @@ body {
 
 
 
-
-
 //////////////// ARTICLES
 
 section {
 	margin: 50px 0;
+	min-height: calc(100vh - 345px);
 	position: relative;
 	z-index: 0;
 
@@ -268,12 +266,81 @@ section {
 			margin: 0 auto;
 
 			h1 {
+				margin-bottom: 30px;
 				span {display: none;}
+			}
+
+			figure {
+				width: 360px;
+				@include transition(width 0.2s ease-out);
+				height: auto;
+				margin:42px auto;
+				display: block;
+				padding: 0;
+				position: relative;
+
+
+				&:after{
+					content: '';
+					position: absolute;
+					right: 5px;
+					top: 5px;
+					width: 40px;
+					height: 40px;
+					background-image: url(../img/ico_expand.svg);
+					background-size: contain;
+					opacity: 0;
+					@include transition(opacity 0.2s linear);
+				}
+
+				&:hover{
+					cursor: pointer;	
+					&:before{
+						opacity: 1;
+					}
+					&:after{
+						opacity: 1;
+					}
+				}
+
+				&.maior{
+					width: 100%;
+					&:after{
+						background-image: url(../img/ico_collapse.svg);
+					}
+				}
+
+				& + *{
+					margin-top: 3em;
+				}
+				@include display(flex);
+				@include flex-direction(column);
+				@include align-items(center);
+
+				img{
+					display: block;
+					box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+					min-height: 50px;
+					width: 100%;
+					height: auto;
+				}
+
+				figcaption{
+					width: 100%;
+					margin-top: 0.5em;
+					text-align: left;
+					display: block;
+					font-size: 0.9em;
+					line-height: 1.2;
+					color: grey;
+				}
 			}
 		}
 	}
 }
 
+//////////////// TIMELINE
+@import 'timeline';
 
 
 //////////////// RODAPE
@@ -339,7 +406,7 @@ section {
 
 
 //////////////// SALVAR PAGINA
-button.salvarpagina {
+#salvarpagina {
 	position: fixed;
 	bottom: 35px;
 	right: 35px;
@@ -364,9 +431,9 @@ button.salvarpagina {
 	}
 
 	&:before {
-		content: "Salvar p\00E1gina";
+		content: "Imprimir p\00E1gina";
 		position: fixed;
-		width: 98px;
+		width: 110px;
 		background: $padrao;
 		color: #fff;
 		box-shadow: 1px 1px 3px transparentize($padrao,0.7);
@@ -391,6 +458,14 @@ button.salvarpagina {
 		&:before, &:after {
 			opacity: 1;
 		}
+	}
+
+	&.fimrolagem {
+		position: absolute;
+		bottom: 135px;
+
+		&:before {bottom: 190px;}
+		&:after {bottom: 182px;}
 	}
 }
 
