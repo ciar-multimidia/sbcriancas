@@ -345,8 +345,10 @@ section {
 					line-height: 1.2;
 					margin: 0 0 18px 0;
 
-					a:hover {
-						tex
+					a {
+						box-shadow: inset 0 -0px 0 transparentize($cor4,1);
+
+						&:hover {box-shadow: inset 0 -3px 0 transparentize($cor3,0.6);}
 					}
 
 					&:before {
