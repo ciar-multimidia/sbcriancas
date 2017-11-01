@@ -165,7 +165,8 @@ body {
 			z-index: 1;
 			color: #fff;
 			font-family: $fonte-destaque;
-			font-size: 2.5em;
+			font-size: 2.1em;
+			line-height: 1;
 			@include transition(width 0.3s ease-in-out);
 			@include transform(translateX(0%));
 
@@ -333,6 +334,28 @@ section {
 					font-size: 0.9em;
 					line-height: 1.2;
 					color: grey;
+				}
+			}
+
+			ul.downloads {
+				margin-top: 0;
+				padding: 0;
+
+				li {
+					line-height: 1.2;
+					margin: 0 0 18px 0;
+
+					a:hover {
+						tex
+					}
+
+					&:before {
+						content: "";
+						vertical-align: text-top;
+						width: 18px;
+						height: 18px;
+						background: url('../img/icon_save.svg') no-repeat center center / 100%;
+					}
 				}
 			}
 		}
