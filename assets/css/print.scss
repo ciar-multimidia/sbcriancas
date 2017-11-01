@@ -106,6 +106,22 @@ table {
   }
 }
 
+dl {
+  margin: 0;
+
+  dt {font-weight: bold; margin-top: 0.5cm}
+  dd {margin: 0;}
+}
+
+.ficha-catalografica {
+  page-break-inside:avoid;
+
+  div p {text-indent: 0}
+}
+
+a.marca-ciar {
+  &:after {display: none !important;}
+}
 
 hr {margin: 1cm 0;}
 

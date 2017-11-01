@@ -520,6 +520,10 @@ main {
 	div:nth-of-type(3) {width: calc(100% - 70px)}
 }
 
+a.marca-ciar {
+	box-shadow:none !important;
+}
+
 //////////////////////////////////////////////// RESPONSIVO
 @import 'responsivo';
 
