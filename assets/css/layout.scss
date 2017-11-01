@@ -511,10 +511,10 @@ main {
     @include flex-direction(row);
     @include flex-wrap(wrap);
     @include justify-content(space-between);	
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
 
-	div p {margin: 0}
+	div p {margin-top: 0}
 	div:nth-of-type(1) {width: 100%; margin-bottom: 15px;}
 	div:nth-of-type(2) {width: 70px;}
 	div:nth-of-type(3) {width: calc(100% - 70px)}
